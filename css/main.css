@@ -1,0 +1,157 @@
+body {
+    background-color: #1E202B !important;
+}
+
+.text-brand{
+    font-size:10px !important ;
+    padding-left: 3.85rem !important;
+}
+nav .navbar-brand img{
+    
+    vertical-align: middle;
+}
+nav .navbar-toggler-icon{
+    background-color: #ffffffff !important;
+}
+header .my-nav .nav-link {
+    position: relative;
+    border: 0.15rem solid transparent;
+    border-radius: 1.8rem;
+    padding: 0.18rem 1.5rem;
+    transition: color 0.4s , border 0.8s;
+}
+
+header .my-nav .active {
+    position: relative;
+    border: 2px solid #009ad8;
+    border-radius: 30px;
+    padding: 3px 25px;
+    color: #009ad8 !important;
+}
+
+header .my-nav .nav-link:hover {
+    border-color: #009ad8;
+    color: #009ad8 !important;
+}
+/* home */
+.home {
+    background-repeat: no-repeat;
+}
+.search {
+    background-color: #1E202B;
+    outline: none;
+}
+
+.find {
+    position: absolute;
+    top: 56px;
+    right: 24px;
+    border: none;
+    background: #009ad8;
+    padding: 9px 25px;
+    border-radius: 30px;
+    color: white;
+    width: 13%;
+}
+
+#today-date {
+    background-color: #2D303D;
+}
+
+#today,
+#today-footer {
+    background-color: #323544;
+}
+
+#today-temp {
+    font-size: 80px;
+}
+
+#today-condition-text {
+    color: #009AD8;
+}
+
+#today .degree{
+    font-size: 2rem !important;
+}
+#today .degree .c{
+    font-size: 3rem !important;
+}
+
+#next-day-name {
+    background-color: #222530;
+}
+
+#next-condition-img {
+    background-color: #262936;
+    height: 342px;
+}
+
+#next-condition-img p {
+    color: #009AD8;
+}
+
+#after-day-name {
+    background-color: #2D303D;
+}
+
+#after-condition-img {
+    background-color: #323544;
+    height: 342px;
+}
+
+#after-condition-img p {
+    color: #009AD8;
+}
+
+.home .nextD{
+    height: 23.3rem !important;
+}
+.todAY{
+    height: 6rem !important;
+}
+/*footer*/
+footer {
+    background-color: #262936;
+}
+
+footer .inner {
+    position: relative;
+}
+
+#search-footer {
+    background-color: #1E202B;
+    outline: none;
+    position: relative;
+}
+
+#Subscribe {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    border: none;
+    background: #009ad8;
+    padding: 9px 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+footer .icons a {
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    text-align: center;
+    line-height: 2;
+    transition:color 0.4s , background-color 0.6s;
+    font-size: 20px;
+    font-size: 1.3375rem;
+}
+
+footer .icons a:hover {
+    color: #fff;
+    background-color: #009AD8;
+}

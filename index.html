@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <header>
+        
+            <nav class="navbar my-nav navbar-expand-lg shadow-sm">
+                <div class="container w-75 m-auto py-2">
+                    <a class="navbar-brand text-capitalize fw-bold text-white" href="#">
+                        <img src="image/logo@2x.png" alt="logo" class="w-25">
+                        weather <p class="text-brand  ">tagline goes here</p></a>
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize fw-medium text-white px-4 me-3 active"
+                                    aria-current="page" href="#home">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize fw-medium text-white px-4 me-2" href="#">news</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize fw-medium text-white px-4 me-2" href="#">live cameras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize fw-medium text-white px-4 me-2" href="#">photos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize fw-medium text-white px-4" href="#contact">contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+    </header>
+    <main>
+        <section  class="home" style="background-image: url(./image/banner.png);">
+            <div class="app-container">
+                <div class="container w-75 px-3 py-5 text-center position-relative">               
+                    <input type="text" class="w-100 mx-auto rounded-5 py-3 px-4 mb-5 text-white search"
+                        placeholder="Find your location..." id="search"/>
+                    <input type="button" value="Find" class="find" id="find"/>
+                    <div class="row g-0">
+                        <div class="item col-md-4 m-0 rounded-4 ">
+                            <div class="d-flex justify-content-between py-2 px-3 bg-main-color text-light text-opacity-75 rounded-start"
+                                id="today-date">
+                                <p id="today-date-day-name" class="my-auto">Sunday</p>
+                                <span>
+                                    <span id="today-date-day-number" class="my-auto">30</span>
+                                    <span id="today-date-month" class="my-auto">May</span>
+                                </span>
+                            </div>
+
+                            <div class="item-content text-start px-3 py-3 pt-5 text-light text-opacity-75 " id="today">
+                                <p id="today-location" class="fs-4">Cairo</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <span class="fs-1 fw-bolder ">
+                                        <span id="today-temp" class="text-light">20</span>
+                                        <span class="text-light fs-5 degree"><sup>o</sup> <span class="c">c</span></span>
+                                    </span>
+                                    <img id="today-condition-img" src="image/113.png" alt="">
+                                </div>
+                                <p id="today-condition-text" class="fs-6">Clear</p>
+                            </div>
+
+                            <div class="item-footer d-flex text-light text-opacity-75 p-3 todAY" id="today-footer">
+                                <div class="d-flex me-3">
+                                    <img src="image/icon-umberella.png" class="footer-icons me-3" alt=""
+                                        width="20px" height="20px">
+                                    <p id="humidity">20</p>
+                                </div>
+                                <div class="d-flex me-3">
+                                    <img src="image/icon-wind.png" class="footer-icons mx-2" alt="" width="20px"
+                                        height="20px">
+                                    <p id="wind">30 km/h</p>
+                                </div>
+                                <div class="d-flex me-3">
+                                    <img src="image/icon-compass.png" class="footer-icons mx-2" alt="" width="20px"
+                                        height="20px">
+                                    <p id="wind-direction">East</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item col-md-4 m-0 ">
+                            <div class="py-2 text-center text-light text-opacity-75" id="next-day-name">
+                                <p class="my-auto">monday</p>
+                            </div>
+                            <div class="item-content text-start text-light p-3 text-center pt-5 nextD"
+                                id="next-condition-img">
+                                <img src="image/114.png" alt="">
+                                <h3>
+                                    <span id="next-max-temp"></span>
+                                    <span><sup>o</sup>c</span>
+                                </h3>
+                                <h5 class="text-muted">
+                                    <span class="text-light text-opacity-75 fs-6" id="next-min-temp">15</span>
+                                    <span class="text-light text-opacity-75"><sup>o</sup> c</span>
+                                </h5>
+                                <p class="fs-6" id="next-condition-text">Partly cloudy</p>
+                            </div>
+                        </div>
+                        <div class="item col-md-4 m-0 rounded-4">
+                            <div class="py-2 text-center px-3 text-light text-opacity-75 rounded-end"
+                                id="after-day-name">
+                                <p class="my-auto">Friday</p>
+                            </div>
+                            <div class="item-content text-start text-light p-3 text-center pt-5 nextD"
+                                id="after-condition-img">
+                                <img src="image/114.png" alt="">
+                                <h3>
+                                    <span id="after-max-temp"></span>
+                                    <span><sup>o</sup>c</span>
+                                </h3>
+                                <h5 class="text-muted">
+                                    <span class="text-light text-opacity-75 fs-6" id="after-min-temp">15</span>
+                                    <span class="text-light text-opacity-75"><sup>o</sup> c</span>
+                                </h5>
+                                <p class="fs-6" id="after-condition-text">Partly cloudy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            </section>
+    </main>
+    <footer>
+        <div class="container w-75 py-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="inner">
+                        <input type="text" class="w-100 mx-auto rounded-5 py-3 px-4 mb-5 text-white"
+                            placeholder="Enter your email..." id="search-footer">
+                        <input type="submit" value="Subscribe" id="Subscribe">
+                        <p class="text-light text-opacity-75">Copyright 2025 <span class="fs-6 text-light text-capitalize fw-medium">aya adel </span>. Designed by Themezy. All
+                            rights reserved</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons ">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-solid fa-g"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
